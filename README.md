@@ -1,12 +1,18 @@
-# Hello World Kotlin App Starter
+# Android + Kotlin Tutorial
 
-The generated kotlin code for a basic hello world app.
+Playing around with the android + kotlin tutorial. Each lab is on it's own branch.
 
-## Compile and Install
+[https://developer.android.com/codelabs/kotlin-android-training-welcome#0](https://developer.android.com/codelabs/kotlin-android-training-welcome#0)
 
+## Compile and Run
+
+The first time, set up local.properties
 ```
-./gradlew
-./gradlew build
-./gradlew InstallDebug
+echo "sdk.dir=${HOME}/Android/Sdk" > local.properties
+```
+
+Compile and install on device using
+```
+./gradlew installDebug
 ```
 
