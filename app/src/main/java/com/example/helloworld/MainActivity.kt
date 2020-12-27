@@ -11,15 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        rollTextView = findViewById(R.id.text_roll_value)
+        diceImageView = findViewById(R.id.image_dice)
+
         // get a reference to the roll button and assign an onClick listener
         val button: Button = findViewById(R.id.button_roll)
         button.setOnClickListener { rollDice() }
     }
 
     private fun rollDice() {
-        val rollTextView: TextView = findViewById(R.id.text_roll_value)
-        val diceImageView: ImageView = findViewById(R.id.image_dice)
-
         val rollValue: Int = (1..6).random()
         val rollImage = when (rollValue) {
             1 -> R.drawable.dice_1
@@ -36,4 +36,7 @@ class MainActivity : AppCompatActivity() {
         // updating the content description for TalkBack
         diceImageView.contentDescription = rollValue.toString()
     }
+
+    lateinit var rollTextView: TextView
+    lateinit var diceImageView: ImageView
 }
