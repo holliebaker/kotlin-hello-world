@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
+        android:accessibilityLiveRegion="polite"
         android:text="@string/label_welcome" />
 
     <Button
